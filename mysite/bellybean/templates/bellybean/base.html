@@ -3,13 +3,27 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="{% static 'css/index.css' %}">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     </head>
     <body>
+        {% block titlebar %}
+        
+        <nav class="navbar navbar-light bg-danger">
+            <a class="navbar-brand" style="text-decoration:none; float: left; color: white;" href="{% url 'home' %}">Belly<span style="font-family: 'Pacifico', cursive;"><b>BEAN</b></span></a>
+            <span class="navbar-text">World's Largest Network of Restaurants</span>
+
+            {% if user.is_authenticated %}
+            <a href="/logout/" class="btn btn-danger"><i class="fas fa-power-off"></i>Log Out</a>
+            {% endif %}
+        </nav>
+
+        {% endblock titlebar %}
+ 
         {% block body %}
         
         {% endblock %}

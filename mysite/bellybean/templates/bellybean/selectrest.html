@@ -1,0 +1,11 @@
+{% extends "bellybean/base.html" %}
+
+{% block body %}
+
+{% for rest in restaurants %}
+<div class="row">
+    <button type="button" class="btn btn-outline-danger" style="width: 100%; margin:0.6%;"><a href="/{{ rest.id }}/" style="text-decoration: none; color: inherit;">{{ rest.id }} : {{ rest.rest_name }}</a></button> 
+</div>  
+{% endfor %}
+
+{% endblock %}

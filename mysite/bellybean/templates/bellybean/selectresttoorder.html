@@ -1,0 +1,18 @@
+{% extends "bellybean/base.html" %}
+
+{% block body %}
+
+<div class="card m-3 p-3">
+    <h3 class="card-title m-3">List of available Restaurants in your area:</h3>
+    <div class="card-text m-5">
+
+    {% for rest in restaurants %}
+    <div class="row">
+        <a class="btn btn-outline-danger" href="{{ rest.id }}/" style="text-decoration: none; color: inherit; width: 20%">{{ rest.rest_name }}</a> 
+    </div>  
+    {% endfor %}
+    </div>
+
+</div>
+
+{% endblock %}

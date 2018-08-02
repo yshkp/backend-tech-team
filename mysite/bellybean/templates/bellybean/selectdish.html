@@ -1,0 +1,25 @@
+{% extends "bellybean/base.html" %}
+
+{% block body %}
+<form method="post">
+    <div class="form-group">
+        <label for="dish_drop">Select a Dish</label>
+        <select class="form-control" id="dish_drop">
+
+        {% for dish in dishes %}
+            <option>{{ dish.dish_name }} @ Rs.{{ dish.dish_price }}</option>
+        {% endfor %}
+
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="quantity">Select quantity</label>
+        <input type="text" class="form-control" id="quantity">
+    </div>
+
+    <div class="form-group">
+        <button type="submit" value="Save" class="btn btn-success">Submit</button><br>
+    </div>
+</form>
+
+{% endblock %}

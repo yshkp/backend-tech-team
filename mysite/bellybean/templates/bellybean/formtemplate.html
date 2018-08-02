@@ -1,0 +1,34 @@
+{% extends 'bellybean/base.html' %}
+
+{% block body %}
+  <form method="POST">
+
+      <a href="{% url 'home' %}">
+          <button type="button" class="btn btn-info">Back To Home</button>  
+        </a>
+    {% csrf_token %}
+
+    <div class="card m-3 p-3">
+      <h3 class="card-title m-3"> {% block form_title %}Choose your Order {% endblock %}</h3>
+      <div class="card-text m-3">
+        {% for field in form %}
+
+        <div class="form-group">
+          <label for="item_name" style="color: black;">{{ field.label_tag }}</label>
+          <div>{{ field }}</div>
+        </div> 
+
+        {% endfor %}
+      </div>
+
+      
+      
+      <div class="form-group m-3">
+        <button type="submit" class="save btn btn-success">{% block form_button_text %}Place the Order{% endblock %}</button>
+      </div>
+
+      
+  </form>
+</div>
+
+{% endblock %}

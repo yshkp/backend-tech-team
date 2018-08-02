@@ -2,6 +2,14 @@
 
 {% block body %}
 
-<a href="{% url 'social:begin' 'google-oauth2' %}">Google login</a>
+<div class="container text-center p-5">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Login using Google</h4>
+            <p class="card-text">Sign in with Google since we use for user authentication</p>
+            <a class="btn btn-danger" href="{% url 'social:begin' 'google-oauth2' %}"><i class="fab fa-google" style="margin: 0.2%;"></i>oogle login</a>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

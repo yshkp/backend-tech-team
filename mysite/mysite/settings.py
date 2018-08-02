@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = 'w*gbt^0a^*4c86yuri)_4bjamg6fj@0qi+(o49fpq#ds98&=38'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -93,22 +93,22 @@ LOGIN_REDIRECT_URL = 'home'
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
-DATABASES = {
+'''DATABASES = {
     'default': dj_database_url.config(
         default=config('DATABASE_URL')
     )
-}
+}'''
 
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-'''DATABASES = {
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
-}'''
+}
 
 
 # Password validation
@@ -149,3 +149,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY ='303195062646-qhjfph19bq9qkgdr5uscnaim21q1s3s1.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '2GLHueSVWWV_up-cjbHaiSR6'

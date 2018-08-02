@@ -2,6 +2,30 @@
 
 {% block body %}
 
-<h1>You are logged in!!</h1>
+<h2 class="m-5 text-warning">Hello, {{ user.first_name }}</h2>
+
+<div class="card m-3 p-3">
+    <div class="card-body">
+        <h1 class="card-title m-3">HUNGRY??</h1>
+        <div class="card-text m-3">Order from our wide range of network!</div>
+        <a class="btn btn-danger m-3" href="{% url 'select_area' %}" style="width: 15%;">Order!!</a>
+    </div>
+</div>
+
+<div class="card m-3 p-3">
+    <div class="card-body">
+        <h1 class="card-title m-3">You own a Restaurant??</h1>
+        <div class="card-text m-3">Register on the largest network of Restaurants</div>
+        <a class="btn btn-success m-3" href="{% url 'registerrest' %}" style="width: 15%;">Register</a>
+    </div>
+</div>
+
+<div class="card m-3 p-3">
+    <div class="card-body">
+        <h1 class="card-title m-3">Diversify your Restaurant!!</h1>
+        <div class="card-text m-3">Add delicious delicacies</div>
+        <a class="btn btn-info m-3" href="{% url 'selectrest' %}" style="width: 15%;">Add Dishes</a>
+    </div>
+</div>
 
 {% endblock %}
